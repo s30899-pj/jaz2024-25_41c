@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: PatSza
+my:
+  custom:
+    property: Hello from application properties
