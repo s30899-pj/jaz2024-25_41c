@@ -1,4 +1,4 @@
-package pl.pjatk.PatSza.FirstPart;
+package pl.pjatk.PatSza;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
