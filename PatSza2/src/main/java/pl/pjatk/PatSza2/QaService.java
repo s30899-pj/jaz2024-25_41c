@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class QaService implements HandlerServiceInterface {
 
     @Override
-    public String SendMessage() {
+    public String sendMessage() {
         return "Hello from Qa";
     }
 

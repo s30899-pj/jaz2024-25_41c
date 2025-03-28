@@ -2,21 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22b6a803-cc11-4616-a131-b261c3b8790e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/FirstPart/ClassProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/ClassProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/FirstPart/DataConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/DataConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/FirstPart/FirstClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/FirstClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/FirstPart/Pojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/Pojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/FirstPart/PojoHomework.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/PojoHomework.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/FirstPart/PojoNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/PojoNew.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/FirstPart/SecondClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/SecondClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/FirstPart/ThirdClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/ThirdClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/SecondPart/DevService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/SecondPart/FacadeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/SecondPart/HandlerServiceInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/SecondPart/ProdService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatSza/PatSza/src/main/java/pl/pjatk/PatSza/SecondPart/QaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatSza2/src/main/java/pl/pjatk/PatSza2/DevService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatSza2/src/main/java/pl/pjatk/PatSza2/DevService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatSza2/src/main/java/pl/pjatk/PatSza2/FacadeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatSza2/src/main/java/pl/pjatk/PatSza2/FacadeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatSza2/src/main/java/pl/pjatk/PatSza2/HandlerServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatSza2/src/main/java/pl/pjatk/PatSza2/HandlerServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatSza2/src/main/java/pl/pjatk/PatSza2/PatSza2Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatSza2/src/main/java/pl/pjatk/PatSza2/PatSza2Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatSza2/src/main/java/pl/pjatk/PatSza2/ProdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatSza2/src/main/java/pl/pjatk/PatSza2/ProdService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatSza2/src/main/java/pl/pjatk/PatSza2/QaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatSza2/src/main/java/pl/pjatk/PatSza2/QaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatSza2/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/PatSza2/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,21 +42,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/asus-pro/Desktop/Studia/SEM4/JAZ/jaz2024-25_41c/PatSza2",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/asus-pro/Desktop/Studia/SEM4/JAZ/jaz2024-25_41c/PatSza2&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\asus-pro\Desktop\Studia\SEM4\JAZ\jaz2024-25_41c\PatSza\PatSza\src\main\java\pl\pjatk\PatSza" />
@@ -91,6 +83,7 @@
       <workItem from="1743035609496" duration="160000" />
       <workItem from="1743036065636" duration="275000" />
       <workItem from="1743036354411" duration="35000" />
+      <workItem from="1743153591070" duration="9000" />
     </task>
     <servers />
   </component>

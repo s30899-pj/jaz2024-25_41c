@@ -10,8 +10,8 @@ public class FacadeService {
 
     HandlerServiceInterface handlerService;
 
-    public FacadeService(List<HandlerServiceInterface> handlerServiceInterfaces, @Value("${app.environment}") String chooseProperties) {
-        switch (chooseProperties) {
+    public FacadeService(List<HandlerServiceInterface> handlerServiceInterfaces, @Value("${app.environment}") String appEnvironment) {
+        switch (appEnvironment) {
             case "dev":
                 handlerService = handlerServiceInterfaces.stream().filter(services -> services.getServiceType().equals("dev")).findFirst().orElse(null);
                 break;
@@ -26,9 +26,7 @@ public class FacadeService {
         }
     }
 
-    public void execute(RequestExecutor executor) {
-        if (handlerService != null) {
-            handlerService.SendMessage();
-        }
+    public String execute() {
+        return handlerService != null ? handlerService.sendMessage() : "No service found";
     }
 }
