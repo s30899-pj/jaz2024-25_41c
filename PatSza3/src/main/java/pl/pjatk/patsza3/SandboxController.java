@@ -14,25 +14,26 @@ public class SandboxController {
         return ResponseEntity.ok(reqParam.orElse("Hello World"));
     }
 
-    @GetMapping("/model")
-    public ResponseEntity<Car> getCar() {
-        Car car = new Car();
-        car.setModel("BMW");
-        car.setColor("red");
-        return ResponseEntity.ok(car);
-    }
+//    @GetMapping("/model")
+//    public ResponseEntity<Car> getCar() {
+//        Car car = new Car();
+//        car.setModel("BMW");
+//        car.setColor("red");
+//        return ResponseEntity.ok(car);
+//    }
 
     @GetMapping("/hello/{someValue}")
     public ResponseEntity<String> responseUser(@PathVariable("someValue") String someValue) {
         return ResponseEntity.ok(someValue);
     }
 
-    @PostMapping("/model")
-    public ResponseEntity<Car> postCar(@RequestBody Car newCar) {
-        Car car = new Car();
-        car.setModel(newCar.getModel());
-        car.setColor(newCar.getColor());
-        return ResponseEntity.ok(car);
-    }
+//    @PostMapping("/model")
+//    public ResponseEntity<Car> postCar(@RequestBody Car newCar) {
+//        Car car = new Car();
+//        car.setId(newCar.getId());
+//        car.setModel(newCar.getModel());
+//        car.setColor(newCar.getColor());
+//        return ResponseEntity.ok(car);
+//    }
 
 }
