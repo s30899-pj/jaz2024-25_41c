@@ -1,4 +1,4 @@
-package pl.pjatk.patsza3;
+package pl.pjatk.patsza3.car.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
