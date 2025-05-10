@@ -16,11 +16,23 @@ public class MovieService {
     }
 
     public Optional<Movie> findMovieById(int id) {
-        return movieRepository.getMovieById(id);
+        return movieRepository.findById(id);
     }
 
     public List<Movie> getMovies() {
-        return movieRepository.getListMovies();
+        return movieRepository.findAll();
+    }
+
+    public boolean changeMovieStatus(int id) {
+        Optional<Movie> movie = movieRepository.findById(id);
+        if (movie.isPresent()) {
+            Movie m = movie.get();
+            m.setAvailable(true);
+            movieRepository.save(m);
+            return m.isAvailable();
+        } else {
+            return false;
+        }
     }
 
     public Movie addMovie(Movie movie) {
@@ -52,4 +64,5 @@ public class MovieService {
         movieToDelete.ifPresent(movieRepository::delete);
         return movieToDelete.isPresent();
     }
+
 }

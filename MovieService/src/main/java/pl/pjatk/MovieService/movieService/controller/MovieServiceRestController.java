@@ -12,7 +12,9 @@ import java.util.List;
 public class MovieServiceRestController {
     private final MovieService movieService;
 
-    public MovieServiceRestController(MovieService movieService) {this.movieService = movieService;}
+    public MovieServiceRestController(MovieService movieService) {
+        this.movieService = movieService;
+    }
 
     @GetMapping("/movies")
     public ResponseEntity<List<Movie>> getMovies() {
@@ -24,6 +26,15 @@ public class MovieServiceRestController {
         return movieService.findMovieById(id)
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("/movies/isAvailable/{id}")
+    public ResponseEntity<Void> changeMovieAvailability(@PathVariable int id) {
+        if (movieService.changeMovieStatus(id)) {
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @PostMapping("/movies")
