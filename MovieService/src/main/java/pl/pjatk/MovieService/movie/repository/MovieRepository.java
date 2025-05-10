@@ -37,8 +37,17 @@ public class MovieRepository {
         return movies;
     }
 
-    public void saveMovie(Movie movie) {
-        movie.setId(new Random().nextInt(10000));
-        movies.add(movie);
+    public void save(Movie movie) {
+        if (movie.getId() == null) {
+            movie.setId(new Random().nextInt(10000));
+            movies.add(movie);
+        } else {
+            movies.removeIf(f -> f.getId() == movie.getId());
+            movies.add(movie);
+        }
+    }
+
+    public void delete(Movie movie) {
+        movies.remove(movie);
     }
 }

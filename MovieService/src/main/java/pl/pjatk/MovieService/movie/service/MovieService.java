@@ -11,20 +11,45 @@ import java.util.Optional;
 public class MovieService {
     private final MovieRepository movieRepository;
 
-    public MovieService(MovieRepository movieRepository) {this.movieRepository = movieRepository;}
+    public MovieService(MovieRepository movieRepository) {
+        this.movieRepository = movieRepository;
+    }
 
-    public Optional<Movie> findMovieById(int id) {return movieRepository.getMovieById(id);}
+    public Optional<Movie> findMovieById(int id) {
+        return movieRepository.getMovieById(id);
+    }
 
-    public List<Movie> getMovies(){
+    public List<Movie> getMovies() {
         return movieRepository.getListMovies();
     }
 
     public Movie addMovie(Movie movie) {
-        if(movie.getId() == null)   {
-            movieRepository.saveMovie(movie);
+        if (movie.getId() == null) {
+            movieRepository.save(movie);
             return movie;
         } else {
             throw new IllegalArgumentException("Movie id must be null");
         }
+    }
+
+    public Optional<Movie> updateMovie(int id, Movie movie) {
+        Optional<Movie> existingMovie = findMovieById(id);
+        if (existingMovie.isPresent()) {
+            Movie updateMovie = existingMovie.get();
+            updateMovie.setTitle(movie.getTitle());
+            updateMovie.setCategory(movie.getCategory());
+            updateMovie.setReleaseDate(movie.getReleaseDate());
+            updateMovie.setDuration(movie.getDuration());
+            movieRepository.save(updateMovie);
+            return Optional.of(updateMovie);
+        } else {
+            return Optional.empty();
+        }
+    }
+
+    public boolean deleteMovie(int id) {
+        Optional<Movie> movieToDelete = findMovieById(id);
+        movieToDelete.ifPresent(movieRepository::delete);
+        return movieToDelete.isPresent();
     }
 }

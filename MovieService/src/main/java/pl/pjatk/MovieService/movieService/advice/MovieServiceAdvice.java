@@ -13,4 +13,5 @@ public class MovieServiceAdvice {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                 .body("Exception occurred on request. Exception message: " + movie.getMessage());
     }
+
 }

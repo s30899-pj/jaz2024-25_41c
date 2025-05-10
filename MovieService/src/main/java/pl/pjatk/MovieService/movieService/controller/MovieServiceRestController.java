@@ -18,6 +18,7 @@ public class MovieServiceRestController {
     public ResponseEntity<List<Movie>> getMovies() {
         return ResponseEntity.ok(movieService.getMovies());
     }
+
     @GetMapping("/movies/{id}")
     public ResponseEntity<Movie> getMovieById(@PathVariable int id) {
         return movieService.findMovieById(id)
@@ -29,4 +30,21 @@ public class MovieServiceRestController {
     public ResponseEntity<Movie> addMovie(@RequestBody Movie movie) {
         return ResponseEntity.ok(movieService.addMovie(movie));
     }
+
+    @PutMapping("/movies/{id}")
+    public ResponseEntity<Movie> updateMovie(@PathVariable int id, @RequestBody Movie movie) {
+        return movieService.updateMovie(id, movie)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @DeleteMapping("/movies/{id}")
+    public ResponseEntity<Void> deleteMovie(@PathVariable int id) {
+        if (movieService.deleteMovie(id)) {
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 }
