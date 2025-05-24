@@ -30,7 +30,7 @@ public class MovieServiceController {
 
     @PostMapping("/movies/isAvailable/{id}")
     public ResponseEntity<Void> setMovieAvailability(@PathVariable int id) {
-        if (movieService.changeMovieStatus(id)) {
+        if (movieService.changeMovieStatus(id, true)) {
             return ResponseEntity.ok().build();
         } else {
             return ResponseEntity.notFound().build();
@@ -39,7 +39,7 @@ public class MovieServiceController {
 
     @PostMapping("/movies/isNotAvailable/{id}")
     public ResponseEntity<Void> setMovieNoAvailability(@PathVariable int id) {
-        if (movieService.changeMovieStatus(id)) {
+        if (movieService.changeMovieStatus(id, false)) {
             return ResponseEntity.ok().build();
         } else {
             return ResponseEntity.notFound().build();

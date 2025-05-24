@@ -23,11 +23,15 @@ public class MovieService {
         return movieRepository.findAll();
     }
 
-    public boolean changeMovieStatus(int id) {
+    public boolean changeMovieStatus(int id, boolean status) {
         Optional<Movie> movie = movieRepository.findById(id);
         if (movie.isPresent()) {
             Movie m = movie.get();
-            m.setAvailable(true);
+            if (status) {
+                m.setAvailable(true);
+            } else {
+                m.setAvailable(false);
+            }
             movieRepository.save(m);
             return m.isAvailable();
         } else {
