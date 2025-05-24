@@ -9,10 +9,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/cinema")
-public class MovieServiceRestController {
+public class MovieServiceController {
     private final MovieService movieService;
 
-    public MovieServiceRestController(MovieService movieService) {
+    public MovieServiceController(MovieService movieService) {
         this.movieService = movieService;
     }
 
@@ -28,8 +28,17 @@ public class MovieServiceRestController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/movies/isAvailable/{id}")
-    public ResponseEntity<Void> changeMovieAvailability(@PathVariable int id) {
+    @PostMapping("/movies/isAvailable/{id}")
+    public ResponseEntity<Void> setMovieAvailability(@PathVariable int id) {
+        if (movieService.changeMovieStatus(id)) {
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @PostMapping("/movies/isNotAvailable/{id}")
+    public ResponseEntity<Void> setMovieNoAvailability(@PathVariable int id) {
         if (movieService.changeMovieStatus(id)) {
             return ResponseEntity.ok().build();
         } else {
