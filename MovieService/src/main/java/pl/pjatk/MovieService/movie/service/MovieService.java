@@ -27,11 +27,7 @@ public class MovieService {
         Optional<Movie> movie = movieRepository.findById(id);
         if (movie.isPresent()) {
             Movie m = movie.get();
-            if (status) {
-                m.setAvailable(true);
-            } else {
-                m.setAvailable(false);
-            }
+            m.setAvailable(status);
             movieRepository.save(m);
             return m.isAvailable();
         } else {
